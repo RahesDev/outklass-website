@@ -301,7 +301,7 @@ No shortcuts — just mastery, projects, and proof of skill.
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-poppins mb-6">
               We Don't Just Train —{" "}
               <span className="gradient-text">
-                We Get You Hired
+                ​We make you deployment ready     
               </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
