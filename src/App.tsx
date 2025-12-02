@@ -9,7 +9,6 @@ import Navigation from "./components/Navigation"; // ✅ your navbar
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import IoTCourse from "./pages/IoTCourse";
-import About from "./pages/About";
 import CareerSupport from "./pages/CareerSupport";
 import Events from "./pages/Event";
 import Blog from "./pages/Blog";
@@ -45,7 +44,6 @@ const App = () => {
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course/iot" element={<IoTCourse />} />
-          <Route path="/about" element={<About />} />
           <Route path="/career-support" element={<CareerSupport />} />
           <Route path="/events" element={<Events />} />
           <Route path="/blog" element={<Blog />} />
