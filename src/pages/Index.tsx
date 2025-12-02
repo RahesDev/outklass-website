@@ -241,7 +241,7 @@ No shortcuts — just mastery, projects, and proof of skill.
           }, {
             value: "₹5.5 LPA",
             label: "Avg. Package"
-          }].map((stat, index) => <div key={index} className="text-center">
+          }].map((stat, index) => <div key={index} className="text-center p-4 rounded-xl glass-card">
                 <div className="text-2xl md:text-3xl font-bold text-teal-primary">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>)}
@@ -260,7 +260,7 @@ No shortcuts — just mastery, projects, and proof of skill.
           }} transition={{
             duration: 0.5,
             delay: index * 0.1
-          }} className="glassmorphic-card group bg-teal-primary/90 backdrop-blur-sm">
+          }} className="glass-teal rounded-xl p-6 group">
                 <div className="text-blinkpath-orange mb-3 group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
@@ -298,7 +298,7 @@ No shortcuts — just mastery, projects, and proof of skill.
     }} transition={{
       duration: 0.6,
       ease: "easeOut"
-    }} className="section-padding bg-emerald-100">
+    }} className="section-padding bg-emerald-100 glass-section">
         <div className="container-custom">
           <motion.div initial={{
           opacity: 0,
