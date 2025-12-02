@@ -217,25 +217,7 @@ const Index = () => {
           }, {
             value: "₹5.5 LPA",
             label: "Avg. Package"
-          }].map((stat, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            scale: 0.8
-          }} whileInView={{
-            opacity: 1,
-            scale: 1
-          }} viewport={{
-            once: false
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.1
-          }} className="glassmorphic-card group bg-teal-primary/90 backdrop-blur-sm">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-accent">
-                  {stat.value}
-                </h3>
-                <p className="text-sm font-medium text-white/90">
-                  {stat.label}
-                </p>
-              </motion.div>)}
+          }].map((stat, index) => {})}
           </div>
 
           {/* Benefits Row */}
@@ -335,12 +317,8 @@ const Index = () => {
                       {course.title}
                     </p>
                     <div className="text-right">
-                      <div className="text-2xl font-semibold text-blinkpath-orange">
-                        {course.price}
-                      </div>
-                      <div className="text-xs line-through opacity-75 pt-1 pb-1">
-                        {course.originalPrice}
-                      </div>
+                      
+                      
                       
                     </div>
                   </div>
