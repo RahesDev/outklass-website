@@ -160,7 +160,7 @@ const Index = () => {
             </span>{" "}
             in Next-Gen Tech
           </p>
-          <p className="text-base md:text-lg mb-8 font-poppins text-primary-foreground">
+          <p className="text-base mb-8 font-poppins text-primary-foreground md:text-xl">
             Where tomorrow’s Industry 5.0 innovators get trained, mentored, and transformed.
 No shortcuts — just mastery, projects, and proof of skill.   
           </p>
