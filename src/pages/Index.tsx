@@ -153,7 +153,7 @@ const Index = () => {
           <p className="text-base mb-4 md:mb-6 italic font-poppins md:text-xl py-[10px]">
             &quot;outlearn-outskill-outklass&quot;
           </p>
-          <p className="text-lg md:text-xl mb-4 font-poppins">
+          <p className="text-lg md:text-xl mb-4 font-poppins text-primary-foreground">
             Go from{" "}
             <span className="font-bold text-[#ff5f45]">
               Zero to Industry-Ready
