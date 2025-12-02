@@ -285,7 +285,7 @@ No shortcuts — just mastery, projects, and proof of skill.
     }} transition={{
       duration: 0.6,
       ease: "easeOut"
-    }} className="section-padding">
+    }} className="section-padding bg-emerald-100">
         <div className="container-custom">
           <motion.div initial={{
           opacity: 0,
