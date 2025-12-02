@@ -55,7 +55,6 @@ const Navigation = () => {
                 { name: "IoT Developer Program", path: "/course/iot" },
             ],
         },
-        { name: "About", path: "/about" },
         { name: "Career Support", path: "/career-support" },
         { name: "Events", path: "/events" },
         { name: "Blog", path: "/blog" },
