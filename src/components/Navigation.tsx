@@ -47,14 +47,7 @@ const Navigation = () => {
     const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/"
     const navItems = [
         { name: "Home", path: "/" },
-        {
-            name: "Courses",
-            path: "/courses",
-            dropdown: [
-                { name: "All Courses", path: "/courses" },
-                { name: "IoT Developer Program", path: "/course/iot" },
-            ],
-        },
+        { name: "Courses", path: "/courses" },
         { name: "Career Support", path: "/career-support" },
         { name: "Events", path: "/events" },
         { name: "Contact", path: "/contact" },
@@ -88,77 +81,20 @@ const Navigation = () => {
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex gap-3">
                             <div className="nav-container">
-                                {navItems.slice(0, 5).map(item => (
+                        {navItems.slice(0, 5).map(item => (
                                     <div
                                         key={item.name}
-                                        className="relative space-x-4"
-                                        ref={el =>
-                                            (dropdownRefs.current[item.name] =
-                                                el)
-                                        }>
+                                        className="relative space-x-4">
                                         <button
-                                            onClick={() =>
-                                                item.dropdown
-                                                    ? handleDropdownToggle(
-                                                          item.name
-                                                      )
-                                                    : navigate(item.path)
-                                            }
+                                            onClick={() => navigate(item.path)}
                                             className={`nav-pill ${
                                                 normalizePath(location.pathname) ===
-                                                    normalizePath(item.path) ||
-                                                (item.dropdown &&
-                                                    item.dropdown.some(
-                                                        dropItem =>
-                                                            normalizePath(location.pathname).startsWith(
-                                                                normalizePath(dropItem.path)
-                                                            )
-                                                    ))
+                                                    normalizePath(item.path)
                                                     ? "active"
                                                     : ""
-                                            } ${
-                                                item.dropdown
-                                                    ? "flex items-center space-x-3"
-                                                    : ""
-                                            } 
-          text-white hover:text-white`}>
+                                            } text-white hover:text-white`}>
                                             <span>{item.name}</span>
-                                            {item.dropdown && (
-                                                <ChevronDown className="w-3 h-3" />
-                                            )}
                                         </button>
-
-                                        {item.dropdown &&
-                                            activeDropdown === item.name && (
-                                                <div
-                                                    className={`absolute top-full left-0 mt-2 w-56 backdrop-blur-md border rounded-xl shadow-2xl py-3 animate-slide-up z-50 bg-darkest-grey/95 border-gray-700`}>
-                                                    {item.dropdown.map(
-                                                        dropItem => (
-                                                            <Link
-                                                                key={
-                                                                    dropItem.name
-                                                                }
-                                                                to={
-                                                                    dropItem.path
-                                                                }
-                                                                onClick={() =>
-                                                                    setActiveDropdown(
-                                                                        null
-                                                                    )
-                                                                }
-                                                                className={`block px-4 py-3 text-sm text-white hover:text-blinkpath-orange hover:bg-gray-800/50 mx-2 rounded-lg transition-all duration-200 ${
-                                                                    normalizePath(location.pathname).startsWith(
-                                                                        normalizePath(dropItem.path)
-                                                                    )
-                                                                        ? "text-blinkpath-orange font-semibold"
-                                                                        : ""
-                                                                }`}>
-                                                                {dropItem.name}
-                                                            </Link>
-                                                        )
-                                                    )}
-                                                </div>
-                                            )}
                                     </div>
                                 ))}
                             </div>
@@ -227,21 +163,6 @@ const Navigation = () => {
                                             }`}>
                                             {item.name}
                                         </Link>
-                                        {item.dropdown && (
-                                            <div className="ml-4 mt-2 space-y-2">
-                                                {item.dropdown.map(dropItem => (
-                                                    <Link
-                                                        key={dropItem.name}
-                                                        to={dropItem.path}
-                                                        onClick={() =>
-                                                            setIsOpen(false)
-                                                        }
-                                                        className="block py-2 text-sm text-gray-300 hover:text-blinkpath-orange transition-colors duration-300">
-                                                        {dropItem.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
                                     </div>
                                 ))}
                             </div>
