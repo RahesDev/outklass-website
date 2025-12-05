@@ -30,14 +30,14 @@ const HiringPartners = () => {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
             Our <span className="gradient-text">Accreditions</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-2">Backed by</p>
+          <p className="text-xl mb-2 text-primary">Backed by</p>
           <p className="text-2xl bg-inherit text-accent md:text-5xl">
             <AnimatedText className="text-accent" />
           </p>
         </div>
         <div className="overflow-hidden">
           <div className="flex animate-marquee space-x-8">
-            {partners.concat(partners).map((partner, index) => <span key={index} className="text-muted-foreground whitespace-nowrap">{partner}</span>)}
+            {partners.concat(partners).map((partner, index) => {})}
           </div>
         </div>
       </div>
