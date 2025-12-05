@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight, Clock, Users, Award, CheckCircle, Play, Download, Calendar, Star, Target, Rocket, Code, Zap, Wifi, Cpu, Cloud, Smartphone, Thermometer, Wrench, Server, Package, CircuitBoard } from "lucide-react";
-import iotMinimal from "@/assets/iot-minimal.jpg";
+import iotFinal from "@/assets/iot-final.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -265,7 +265,7 @@ const IoTCourse = () => {
                         <div className="relative">
                             <Card className="overflow-hidden border-card">
                                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-b border-gray-600">
-                                    <img src="/lovable-uploads/6f982b6f-6f56-43a4-b566-dc9af052cccb.png" alt="IoT Course" className="w-full h-full object-cover" loading="lazy" />
+                                    <img src={iotFinal} alt="IoT Course" className="w-full h-full object-cover" loading="lazy" />
                                 </div>
                                 <CardContent className="p-6" style={{
                 backgroundColor: '#003030'
