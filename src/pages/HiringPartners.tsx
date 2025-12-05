@@ -8,13 +8,11 @@ const HiringPartners = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
               Our <span className="gradient-text">Accreditions</span>
             </h2>
-            <p className="text-xl text-muted-foreground"> certified by </p>
+            <p className="text-xl text-muted-foreground"> Backed by </p>
           </div>
           <div className="overflow-hidden">
             <div className="flex animate-marquee space-x-8">
-              {partners.concat(partners).map((partner, index) => <div key={index} className="min-w-max px-5 py-1 bg-card/50 text-muted-foreground font-semibold text-lg rounded-md shadow-sm border border-orange-500 hover:bg-card/80 transition-all">
-                  {partner}
-                </div>)}
+              {partners.concat(partners).map((partner, index) => {})}
             </div>
           </div>
         </div>

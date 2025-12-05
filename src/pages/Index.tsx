@@ -171,8 +171,8 @@ const Index = () => {
         duration: 0.8,
         ease: "easeOut"
       }} className="w-full max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight text-center font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground">
-            Building Industry 5.0 Engineers   <br />
+          <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight text-center font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground">Building India's Next Gen Engineers
+          <br />
             
           </h1>
           <p className="text-base mb-4 md:mb-6 italic font-poppins py-[10px] text-accent md:text-2xl">
@@ -185,10 +185,7 @@ const Index = () => {
             </span>{" "}
             in Next-Gen Tech
           </p>
-          <p className="text-base mb-8 font-poppins text-primary-foreground md:text-xl">
-            Where tomorrow’s Industry 5.0 innovators get trained, mentored, and transformed.
-No shortcuts — just mastery, projects, and proof of skill.   
-          </p>
+          <p className="text-base mb-8 font-poppins text-primary-foreground md:text-xl">Where tomorrow’s Industry 4.0 innovators get trained, mentored, and transformed. No shortcuts — just mastery, projects, and proof of skill.</p>
           
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 md:gap-6 justify-center">
