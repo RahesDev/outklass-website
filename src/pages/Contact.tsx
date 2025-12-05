@@ -312,7 +312,7 @@ const Contact = () => {
                                             <div className="w-6 h-6 mr-3 bg-pink-500 rounded flex items-center justify-center text-white text-xs">
                                                 I
                                             </div>
-                                            Instagram: @ outklass_tech
+                                            Instagram: @ outklass.ed
                                         </Button>
                                     </div>
                                 </CardContent>
