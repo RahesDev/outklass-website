@@ -35,11 +35,7 @@ const HiringPartners = () => {
           </p>
         </div>
         <div className="overflow-hidden">
-          <div className="flex animate-marquee space-x-8">
-            {partners.concat(partners).map((partner, index) => (
-              <span key={index} className="text-muted-foreground whitespace-nowrap">{partner}</span>
-            ))}
-          </div>
+          
         </div>
       </div>
     </section>;
