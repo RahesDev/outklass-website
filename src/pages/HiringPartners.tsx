@@ -25,7 +25,7 @@ const AnimatedText = ({
 const HiringPartners = () => {
   const partners = ["TCS", "Infosys", "Wipro", "Accenture", "Capgemini", "Amazon", "Microsoft", "Google", "IBM", "Oracle", "Flipkart", "Zomato", "PayTM", "Ola", "Swiggy"];
   return <section className="pt-15">
-      <div className="container-custom">
+      <div className="container-custom mx-0 my-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
             Our <span className="gradient-text">Accreditions</span>
