@@ -163,9 +163,7 @@ const IoTCourse = () => {
                 <div className="container-custom py-4">
                     <div className="flex items-center justify-between">
                         <div>
-                            <h1 className="text-xl font-bold">
-                                IoT Developer Program
-                            </h1>
+                            <h1 className="text-xl font-bold text-accent">AI + INDUSTRIAL IoT ENGINEER Program</h1>
                             <p className="text-sm text-muted-foreground">
                                 2.5 Months • Beginner to Advanced • Build 5 Real
                                 Projects
@@ -200,17 +198,11 @@ const IoTCourse = () => {
 
                             <h1 className="text-4xl md:text-5xl font-bold font-bebasNue mb-6">
                                 Become an{" "}
-                                <span className="gradient-text">
-                                    IoT Developer
-                                </span>{" "}
+                                <span className="gradient-text">AI INDUSTRIAL IoT ENGINEER</span>{" "}
                                 in 2.5 Months
                             </h1>
 
-                            <p className="text-xl text-muted-foreground mb-8">
-                                Build smart devices with ESP32, sensors, MQTT,
-                                and cloud. Perfect for electronics students
-                                looking to enter the IoT industry.
-                            </p>
+                            <p className="text-xl text-muted-foreground mb-8">Build smart devices with ESP32, sensors, MQTT, and cloud,Integrate AI and LLMS. Perfect for electronics students looking to enter the IoT industry.</p>
 
                             <div className="grid grid-cols-3 gap-6 mb-8">
                                 <div className="text-center">
@@ -514,8 +506,8 @@ const IoTCourse = () => {
 
                                                 {/* Accordion Content */}
                                                 <AccordionContent>
-                                                    <div className="space-y-2 mt-2">
-                                                        {phase.points.map((point: string, pointIndex: number) => <div key={pointIndex} className="flex items-center text-muted-foreground">
+                                                    <div className="space-y-2 mt-2 text-teal-100">
+                                                        {phase.points.map((point: string, pointIndex: number) => <div key={pointIndex} className="flex items-center text-teal-100">
                                                                     <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                                                                     {point}
                                                                 </div>)}
@@ -662,8 +654,8 @@ const IoTCourse = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projects.map((project, index) => <Card key={index} className="card-hover">
-                                <CardContent className="p-6">
-                                    <div className="text-3xl mb-4">🔧</div>
+                                <CardContent className="p-6 mx-0 border px-[2px] pb-0 pl-[2px] pr-0 my-0 pt-[2px] shadow">
+                                    
                                     <h3 className="text-xl font-bold mb-3">
                                         {project.title}
                                     </h3>
