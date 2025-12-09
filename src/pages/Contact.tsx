@@ -96,7 +96,7 @@ const Contact = () => {
         }} transition={{
           duration: 0.5
         }} className="text-center max-w-3xl mx-auto mb-16">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebasNue mb-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebasNue mb-6 text-accent">
                             Get In <span className="gradient-text">Touch</span>
                         </h1>
                         <p className="text-xl text-muted-foreground mb-8">
