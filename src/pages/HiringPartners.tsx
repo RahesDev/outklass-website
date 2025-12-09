@@ -25,7 +25,7 @@ const AnimatedText = ({
 const HiringPartners = () => {
   const partners = ["TCS", "Infosys", "Wipro", "Accenture", "Capgemini", "Amazon", "Microsoft", "Google", "IBM", "Oracle", "Flipkart", "Zomato", "PayTM", "Ola", "Swiggy"];
   return <section className="pt-15">
-      <div className="container-custom mx-0 my-0">
+      <div className="container-custom mx-0 my-[6px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-poppins mb-4 text-primary font-semibold">Minds Behind The Curriculum
           </h2>
