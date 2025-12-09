@@ -71,7 +71,7 @@ const Events = () => {
                             </span>
                             <div className="w-2 h-2 bg-gen-z-purple rounded-full animate-pulse"></div>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold font-bebasNue mb-6 text-accent">
+                        <h1 className="text-4xl font-bold font-bebasNue mb-6 text-accent md:text-6xl">
                             Workshops &{" "}
                             <span className="gradient-text">
                                 Short Programs
