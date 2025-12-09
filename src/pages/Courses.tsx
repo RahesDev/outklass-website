@@ -87,78 +87,76 @@ const CourseCard = memo(({
             </> :
         // Active Course Card Layout
         <>
-              <div className="relative p-6 text-white overflow-hidden border-b border-white/20 h-[228px] bg-gradient-to-br from-teal-primary to-teal-dark my-0 mx-0 px-[30px] py-[40px]">
+              <div className="relative p-4 text-white overflow-hidden border-b border-white/20 bg-gradient-to-br from-teal-primary to-teal-dark">
                 <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-full bg-white/20 border border-white/40">
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="flex items-center space-x-2">
+                      <div className="p-1.5 rounded-full bg-white/20 border border-white/40">
                         {course.icon}
                       </div>
-                      <div className="px-3 py-1 bg-gradient-to-r from-white/30 to-white/20 border border-white/50 rounded-full text-xs font-bold tracking-wider backdrop-blur-sm bg-primary">
+                      <div className="px-2 py-0.5 bg-gradient-to-r from-white/30 to-white/20 border border-white/50 rounded-full text-[10px] font-bold tracking-wider backdrop-blur-sm bg-primary">
                         LIVE
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-black text-accent">
+                      <div className="text-xl font-black text-accent">
                         {course.price}
                       </div>
-                      <div className="text-xs line-through opacity-60 text-white">
+                      <div className="text-[10px] line-through opacity-60 text-white">
                         {course.originalPrice}
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white leading-tight group-hover:text-orange-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold mb-2 text-white leading-tight group-hover:text-orange-400 transition-colors duration-300">
                     {course.title}
                   </h3>
-                  <p className="text-white/90 text-sm leading-relaxed">
+                  <p className="text-white/90 text-xs leading-relaxed">
                     {course.description}
                   </p>
                 </div>
               </div>
               
-              <div className="p-6 bg-teal-primary/95 backdrop-blur-md">
-                <div className="grid grid-cols-3 gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                    <Clock className="w-4 h-4 mx-auto mb-2 text-white" />
-                    <div className="text-xs font-medium text-white">
+              <div className="p-4 bg-teal-primary/95 backdrop-blur-md">
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="p-2 rounded-lg bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                    <Clock className="w-3 h-3 mx-auto mb-1 text-white" />
+                    <div className="text-[10px] font-medium text-white">
                       {course.duration}
                     </div>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                    <Calendar className="w-4 h-4 mx-auto mb-2 text-white" />
-                    <div className="text-xs font-medium text-white text-nowrap">
+                  <div className="p-2 rounded-lg bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                    <Calendar className="w-3 h-3 mx-auto mb-1 text-white" />
+                    <div className="text-[10px] font-medium text-white text-nowrap">
                       {course.mode}
                     </div>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                    <Users className="w-4 h-4 mx-auto mb-2 text-white" />
-                    <div className="text-xs font-medium text-white">
+                  <div className="p-2 rounded-lg bg-white/10 border border-white/20 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                    <Users className="w-3 h-3 mx-auto mb-1 text-white" />
+                    <div className="text-[10px] font-medium text-white">
                       {course.students}
                     </div>
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-medium mb-3 text-white text-sm tracking-wide">
+                <div className="mb-4">
+                  <h4 className="font-medium mb-2 text-white text-xs tracking-wide">
                     TECH STACK:
                   </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {course.features.map((feature, featureIndex) => <div key={featureIndex} className="px-3 py-1 rounded-full bg-white/20 border border-white/30 text-xs font-medium text-white backdrop-blur-sm hover:bg-white/30 transition-all duration-300">
+                  <div className="flex flex-wrap gap-1.5">
+                    {course.features.map((feature, featureIndex) => <div key={featureIndex} className="px-2 py-0.5 rounded-full bg-white/20 border border-white/30 text-[10px] font-medium text-white backdrop-blur-sm hover:bg-white/30 transition-all duration-300">
                         {feature}
                       </div>)}
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center gap-2">
                   <Link to={course.link}>
-                    <Button className="w-full btn-glow group-hover:scale-[1.02] transition-transform duration-300">
+                    <Button size="sm" className="btn-glow group-hover:scale-[1.02] transition-transform duration-300 text-xs">
                       Know More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                   <div className="">
-                    <div className="">
-                      <ContactModal defaultCourse={course.title} />
-                    </div>
+                    <ContactModal defaultCourse={course.title} />
                   </div>
                 </div>
               </div>
@@ -293,7 +291,7 @@ const Courses = () => {
               </Badge>
             </div>
 
-            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-2xl mx-auto">
+            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-4 max-w-md mx-auto">
               {activeCourses.map((course, index) => <CourseCard key={course.title} course={course} index={index} />)}
             </div>
           </motion.div>

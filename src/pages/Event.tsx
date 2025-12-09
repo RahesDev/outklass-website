@@ -83,7 +83,7 @@ const Events = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
                         {workshops.map((workshop, index) => <motion.div key={index} initial={{
             opacity: 0,
             y: 50
@@ -98,50 +98,50 @@ const Events = () => {
           }}>
                                 <Card className="card-3d overflow-hidden group h-full bg-teal-primary/90 hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]">
                                     <CardContent className="p-0">
-                                        <div className="relative p-6 text-white overflow-hidden bg-teal-primary/95
+                                        <div className="relative p-4 text-white overflow-hidden bg-teal-primary/95
              border-b border-white/20">
                                             <div className="relative z-10">
-                                                <div className="flex justify-between items-start mb-4">
-                                                    <div className="flex items-center space-x-3">
-                                                        <div className="p-2 rounded-full bg-white/20 border border-white/40">
+                                                <div className="flex justify-between items-start mb-3">
+                                                    <div className="flex items-center space-x-2">
+                                                        <div className="p-1.5 rounded-full bg-white/20 border border-white/40">
                                                             {workshop.icon}
                                                         </div>
-                                                        <div className="px-3 py-1 bg-gradient-to-r from-white/30 to-white/20 border border-white/50 rounded-full text-xs font-semibold tracking-wider backdrop-blur-sm">
+                                                        <div className="px-2 py-0.5 bg-gradient-to-r from-white/30 to-white/20 border border-white/50 rounded-full text-[10px] font-semibold tracking-wider backdrop-blur-sm">
                                                             {workshop.type.toUpperCase()}
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-2xl font-semibold text-accent">
+                                                        <div className="text-lg font-semibold text-accent">
                                                             {workshop.price}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h3 className="text-2xl font-semibold mb-3 text-white leading-tight group-hover:text-orange-400 transition-colors duration-300">
+                                                <h3 className="text-base font-semibold mb-2 text-white leading-tight group-hover:text-orange-400 transition-colors duration-300">
                                                     {workshop.title}
                                                 </h3>
-                                                <p className="text-white/90 leading-relaxed">
+                                                <p className="text-white/90 text-xs leading-relaxed line-clamp-2">
                                                     {workshop.description}
                                                 </p>
                                             </div>
                                         </div>
 
-                                        <div className="p-6 bg-teal-primary/95 backdrop-blur-md">
-                                            <div className="space-y-3 mb-6">
-                                                <div className="flex items-center p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                                                    <Clock className="w-5 h-5 mr-4 text-white" />
-                                                    <span className="text-white font-semibold">
+                                        <div className="p-4 bg-teal-primary/95 backdrop-blur-md">
+                                            <div className="space-y-2 mb-4">
+                                                <div className="flex items-center p-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                                                    <Clock className="w-4 h-4 mr-3 text-white" />
+                                                    <span className="text-white text-sm font-medium">
                                                         {workshop.duration}
                                                     </span>
                                                 </div>
-                                                <div className="flex items-center p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                                                    <Calendar className="w-5 h-5 mr-4 text-white" />
-                                                    <span className="text-white font-semibold">
+                                                <div className="flex items-center p-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                                                    <Calendar className="w-4 h-4 mr-3 text-white" />
+                                                    <span className="text-white text-sm font-medium">
                                                         {workshop.date}
                                                     </span>
                                                 </div>
-                                                <div className="flex items-center p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
-                                                    <Users className="w-5 h-5 mr-4 text-white" />
-                                                    <span className="text-white font-semibold">
+                                                <div className="flex items-center p-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+                                                    <Users className="w-4 h-4 mr-3 text-white" />
+                                                    <span className="text-white text-sm font-medium">
                                                         {workshop.seats}
                                                     </span>
                                                 </div>
