@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, Clock, Users, ArrowRight, Zap, Code } from "lucide-react";
+import { Calendar, Clock, Users, ArrowRight, Zap, Cpu, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -8,17 +8,7 @@ import EventWorkshop from "./EventWorkshop";
 import { motion } from "framer-motion";
 const Events = () => {
   const workshops = [{
-    title: " outklass DevOps Fundamentals Workshop",
-    description: "3-day intensive workshop covering Docker, Jenkins, and AWS basics",
-    duration: "3 Days",
-    date: "Jan 15-17, 2024",
-    seats: "25 seats left",
-    price: "Free",
-    type: "workshop",
-    image: "/assets/devops.jpg",
-    icon: <Code className="w-6 h-6" />
-  }, {
-    title: " outklass IoT Project Building Bootcamp",
+    title: "Outklass IoT Project Building Bootcamp",
     description: "Build your first smart home automation system in 2 days",
     duration: "2 Days",
     date: "Jan 22-23, 2024",
@@ -27,6 +17,26 @@ const Events = () => {
     type: "bootcamp",
     image: "/assets/iot.jpg",
     icon: <Zap className="w-6 h-6" />
+  }, {
+    title: "Outklass EV Powertrain Sizing Workshop",
+    description: "2-day intensive workshop on Electric Vehicle powertrain design, motor sizing, and battery system optimization",
+    duration: "2 Days",
+    date: "Feb 10-11, 2024",
+    seats: "20 seats left",
+    price: "₹3,499",
+    type: "workshop",
+    image: "/assets/iot.jpg",
+    icon: <Car className="w-6 h-6" />
+  }, {
+    title: "Outklass VLSI RTL Design Workshop",
+    description: "1-day hands-on workshop covering RTL coding, synthesis basics, and digital design fundamentals",
+    duration: "1 Day",
+    date: "Feb 15, 2024",
+    seats: "15 seats left",
+    price: "₹1,999",
+    type: "workshop",
+    image: "/assets/iot.jpg",
+    icon: <Cpu className="w-6 h-6" />
   }];
   return <div className="min-h-screen ">
             <motion.section initial={{
