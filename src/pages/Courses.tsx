@@ -243,14 +243,12 @@ const Courses = () => {
         }} className="text-center max-w-4xl mx-auto mb-16">
             <div className="inline-flex items-center justify-center space-x-2 mb-6">
               <div className="w-2 h-2 bg-blinkpath-orange rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                Future-Ready Tech Skills
-              </span>
+              <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground">FUTURE-READY ENGINEERING SKILLS</span>
               <div className="w-2 h-2 bg-gen-z-purple rounded-full animate-pulse"></div>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebasNue mb-6 text-accent">
               Master Tomorrow's{" "}
-              <span className="gradient-text">Tech Skills</span>
+              <span className="gradient-text">ENGINEERING Skills</span>
             </h1>
             <p className="text-xl mb-8 leading-relaxed text-slate-500">
               Industry-focused programs designed to make you job-ready in
