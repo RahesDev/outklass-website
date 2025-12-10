@@ -9,6 +9,7 @@ import ContactModal from "@/components/ui/ContactModal";
 import HiringPartners from "./HiringPartners";
 import TextReveal from "../components/ui/TextReveal";
 import heroTechObject from "../assets/hero-tech-object.png";
+import heroEngineer from "../assets/hero-engineer.jpg";
 import { motion } from "framer-motion";
 const Index = () => {
   const [visibleSection, setVisibleSection] = useState("");
@@ -160,49 +161,79 @@ const Index = () => {
   }];
   return <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen hero-digital-bg gap-0 flex-col flex items-center justify-center">
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.8,
-        ease: "easeOut"
-      }} className="w-full max-w-4xl px-6 text-center mx-0 ml-[5px] mt-0 mr-px">
-          <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground text-center">Building India's Next Gen Engineers        
-          <br />
+      <section className="relative min-h-screen hero-digital-bg flex items-center overflow-hidden">
+        <div className="container-custom w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 lg:py-0">
+          {/* Left Content */}
+          <motion.div initial={{
+            opacity: 0,
+            x: -50
+          }} animate={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }} className="text-left z-10">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-poppins tracking-tight mb-6 leading-tight font-semibold text-primary-foreground">
+              Building India's Next Gen Engineers
+            </h1>
+            <p className="text-base mb-4 md:mb-6 italic font-poppins text-accent md:text-2xl">
+              &quot;outlearn-outskill-outklass&quot;
+            </p>
+            <p className="text-lg md:text-xl mb-4 font-poppins text-primary-foreground">
+              Go from{" "}
+              <span className="font-bold text-teal-100">
+                Zero to Industry-Ready
+              </span>{" "}
+              in Next-Gen Tech
+            </p>
+            <p className="text-base mb-8 font-poppins text-primary-foreground md:text-lg">
+              Where tomorrow's Industry 4.0 innovators get trained, mentored, and transformed. No shortcuts — just mastery, projects, and proof of skill.
+            </p>
             
-          </h1>
-          <p className="text-base mb-4 md:mb-6 italic font-poppins py-[10px] text-accent md:text-2xl">
-            &quot;outlearn-outskill-outklass&quot;
-          </p>
-          <p className="text-lg md:text-xl mb-4 font-poppins text-primary-foreground mr-0">
-            Go from{" "}
-            <span className="font-bold text-teal-100">
-              Zero to Industry-Ready
-            </span>{" "}
-            in Next-Gen Tech
-          </p>
-          <p className="text-base mb-8 font-poppins text-primary-foreground md:text-xl">Where tomorrow’s Industry 4.0 innovators get trained, mentored, and transformed. No shortcuts — just mastery, projects, and proof of skill.</p>
-          
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 md:gap-6 justify-center">
-            <Link to={"/events"}>
-              <Button size="lg" className="btn-glow text-lg px-8 py-4">
-                Join Free Workshop
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 md:gap-6">
+              <Link to={"/events"}>
+                <Button size="lg" className="btn-glow text-lg px-8 py-4">
+                  Join Free Workshop
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
 
-            <Link to="/courses">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-primary transition-all duration-300">
-                Explore Programs
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
+              <Link to="/courses">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-primary transition-all duration-300">
+                  Explore Programs
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div initial={{
+            opacity: 0,
+            x: 50
+          }} animate={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut",
+            delay: 0.2
+          }} className="relative hidden lg:block">
+            <div className="relative">
+              {/* Blended overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-teal-primary/60 z-10 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-teal-primary/40 via-transparent to-transparent z-10 rounded-2xl" />
+              <img 
+                src={heroEngineer} 
+                alt="Futuristic engineer working on industrial automation"
+                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+              />
+              {/* Glow effect */}
+              <div className="absolute -inset-4 bg-accent/20 blur-3xl -z-10 rounded-full" />
+            </div>
+          </motion.div>
+        </div>
       </section>
       <motion.section initial={{
       opacity: 0,
