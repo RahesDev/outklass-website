@@ -160,7 +160,7 @@ const IoTCourse = () => {
   return <div className="min-h-screen  from-background via-primary/5 to-accent/10">
             {/* Sticky Header */}
             <div className="fixed top-16 md:top-20 w-full bg-background/80 backdrop-blur-lg border-b border-border/50 z-40">
-                <div className="container-custom py-4 bg-teal-50">
+                <div className="container-custom py-4 bg-inherit">
                     <div className="flex items-center justify-between">
                         <div>
                             <h1 className="text-xl font-bold text-accent">AI + INDUSTRIAL IoT ENGINEER Program</h1>
