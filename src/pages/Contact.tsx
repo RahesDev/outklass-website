@@ -43,12 +43,14 @@ const Contact = () => {
       title: "Phone",
       details: ["+91 8838194157"],
       action: "Call Now",
+      link: "tel:+918838194157",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: ["support@outklass.com"],
       action: "Email Us",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=support@outklass.com",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -56,12 +58,14 @@ const Contact = () => {
       details: ["Will be updated soon."],
       // details: ["Tech Hub, Sector 62", "Noida, UP 201309, India"],
       action: "Get Directions",
+      link: "https://www.google.com/maps/search/?api=1&query=Iyer+Bungalow+Madurai+625014",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Office Hours",
       details: ["Mon - Sat: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
       action: "Visit Us",
+      link: "https://www.google.com/maps/search/?api=1&query=Iyer+Bungalow+Madurai+625014",
     },
   ];
   const faqs = [
@@ -189,13 +193,21 @@ const Contact = () => {
                         </div>
                       ))}
                     </div>
-                    <Button
-                      variant="outline"
-                      // size="lg"
-                      className="hover:scale-105 transition-transform duration-300 bg-accent"
+                    <a
+                      href={info.link}
+                      target={
+                        info.link.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel="noopener noreferrer"
                     >
-                      {info.action}
-                    </Button>
+                      <Button
+                        variant="outline"
+                        // size="lg"
+                        className="hover:scale-105 transition-transform duration-300 bg-accent"
+                      >
+                        {info.action}
+                      </Button>
+                    </a>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -403,33 +415,54 @@ const Contact = () => {
                     Alternative Ways to Reach Us
                   </h3>
                   <div className="space-y-4">
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start bg-inherit"
+                    <a
+                      href="https://wa.me/918838194157"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      <div className="w-6 h-6 mr-3 bg-green-500 rounded flex items-center justify-center text-white text-xs">
-                        W
-                      </div>
-                      Whatsapp : +91 8838194157
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start bg-inherit"
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start bg-inherit"
+                      >
+                        <div className="w-6 h-6 mr-3 bg-green-500 rounded flex items-center justify-center text-white text-xs">
+                          W
+                        </div>
+                        Whatsapp : +91 8838194157
+                      </Button>
+                    </a>
+                    <a
+                      href="https://t.me/outklass_support"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      <div className="w-6 h-6 mr-3 bg-blue-500 rounded flex items-center justify-center text-white text-xs">
-                        T
-                      </div>
-                      Telegram: @ outklass_support
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start bg-inherit"
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start bg-inherit"
+                      >
+                        <div className="w-6 h-6 mr-3 bg-blue-500 rounded flex items-center justify-center text-white text-xs">
+                          T
+                        </div>
+                        Telegram: @ outklass_support
+                      </Button>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/outklass.ed/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      <div className="w-6 h-6 mr-3 bg-pink-500 rounded flex items-center justify-center text-white text-xs">
-                        I
-                      </div>
-                      Instagram: @ outklass.ed
-                    </Button>
+                      <Button
+                        variant="outline"
+                        className="w-full justify-start bg-inherit"
+                      >
+                        <div className="w-6 h-6 mr-3 bg-pink-500 rounded flex items-center justify-center text-white text-xs">
+                          I
+                        </div>
+                        Instagram: @ outklass.ed
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
