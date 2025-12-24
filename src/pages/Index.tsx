@@ -290,23 +290,36 @@ const Index = () => {
         <p className="text-center text-xl text-muted-foreground">
           Trusted by Thousands, Backed by Results
         </p>
-        <div className="section-padding-choseus container-custom relative z-10 py-[12px] px-[5px] my-[6px]">
-          {/* <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
-            {[{
-            value: "4,500+",
-            label: "Students Trained"
-          }, {
-            value: "4.8/5",
-            label: "Star Rating",
-            icon: <Star className="w-5 h-5 text-yellow-500 inline ml-1" fill="currentColor" />
-          }].map((stat, index) => <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-teal-primary flex items-center justify-center border-solid rounded-sm opacity-100 bg-accent border-4 shadow-2xl border-accent text-primary-foreground">
+        <div className="section-padding-choseus container-custom relative z-10 py-[12px] px-[5px] mb-[6px] mt-[4px] ">
+          <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
+            {[
+              {
+                value: "4,500+",
+                label: "Students Trained",
+              },
+              {
+                value: "4.8/5",
+                label: "Star Rating",
+                icon: (
+                  <Star
+                    className="w-5 h-5 text-yellow-500 inline ml-1"
+                    fill="currentColor"
+                  />
+                ),
+              },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                {/* <div className="text-2xl p-2 md:text-3xl font-bold text-teal-primary flex items-center justify-center border-solid rounded-sm opacity-100 bg-accent border-4 shadow-2xl border-accent text-primary-foreground"></div> */}
+                <Button size="lg" className="btn-glow text-lg px-8 py-7">
                   {stat.value}
                   {stat.icon}
+                </Button>
+                <div className="text-md text-muted-foreground mt-3">
+                  {stat.label}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>)}
-          </div> */}
+              </div>
+            ))}
+          </div>
 
           {/* Benefits Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
@@ -328,7 +341,7 @@ const Index = () => {
                   duration: 0,
                   delay: index * 0.1,
                 }}
-                className="glassmorphic-card group bg-teal-primary/90 backdrop-blur-sm"
+                className="glassmorphic-card group "
               >
                 <div className="text-blinkpath-orange mb-3 group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
@@ -354,7 +367,7 @@ const Index = () => {
           amount: 0.5,
         }}
         transition={{
-          duration: 0.6,
+          duration: 0,
         }}
         className=" my-0 mt-0 pt-0"
       >
@@ -379,7 +392,7 @@ const Index = () => {
           duration: 0.6,
           ease: "easeOut",
         }}
-        className="section-padding"
+        className="section-padding bg-teal-thick"
       >
         <div className="container-custom">
           <motion.div
@@ -431,15 +444,15 @@ const Index = () => {
                   delay: index * 0.1,
                 }}
               >
-                <Card className="glassmorphic-card text-center relative overflow-hidden h-full">
-                  <div className="absolute top-4 right-4 text-2xl font-bold text-white">
+                <Card className="glassmorphic-card text-center relative overflow-hidden h-full warap_sury ">
+                  <div className="absolute top-4 right-4 text-3xl font-bold text-[#ae2e7b54]">
                     {step.step}
                   </div>
                   <CardContent className="p-6 relative z-10">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-lg mb-6">
                       {step.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-white">
+                    <h3 className="text-xl font-bold mb-4 text-white warap_sury_keel">
                       {step.title}
                     </h3>
 
@@ -532,17 +545,14 @@ const Index = () => {
                 className="my-0 px-[50px] py-0 mx-[50px] border-teal-300"
               >
                 <Card className="group h-full p-0">
-                  <div className="new_livimgman">
-                     <img
-                src={IOTimage}
-                      alt="IOT Program"
-                    />
+                  <div className="new_livimgman warap_sury">
+                    <img src={IOTimage} alt="IOT Program" />
                     <CardContent className="py-8 px-6 new_livp_crdman border-0">
                       <div className="flex items-start justify-between mb-6 relative p-3 overflow-hidden border-b border-teal-primary/20 py-0 px-px">
                         {/* <div className="p-3 bg-primary/10 rounded-lg text-[#ff5f45] group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
                      </div> */}
-                        <p className="text-xl font-semibold mb-3 leading-tight transition-colors duration-300 text-accent text-primary-foreground">
+                        <p className="text-xl font-semibold mb-3 leading-tight transition-colors duration-300 text-accent text-primary-foreground warap_sury_keel">
                           {course.title}
                         </p>
                         <div className="text-right"></div>
@@ -599,60 +609,55 @@ const Index = () => {
             ))}
           </div>
         </div>
-        <Link to="/courses" className="group block">
-          <div className="mx-auto max-w-4xl">
+        <Link to="/courses" className="group">
+          <div className="d-flex w-full justify-content-center align-items-center text-center">
             <div
               className="
-          relative
-          flex
-          items-center
-          justify-center
-          gap-3
-          px-8
-          py-6
-          rounded-full
-          backdrop-blur-md
-          bg-white/10
-          border border-white/20
-          shadow-[0_20px_50px_rgba(0,0,0,0.15)]
-          transition-all
-          duration-300
-          group-hover:scale-[1.01]
-        "
+        animated-border
+        relative
+        inline-flex
+        items-center
+        gap-3
+        px-6
+        py-4
+        rounded-full
+        backdrop-blur-md
+        bg-white/10
+        shadow-orange-glow
+        transition-all
+        duration-300
+        group-hover:scale-[1.02]
+      "
             >
-              <span className="text-lg md:text-xl font-semibold text-primary text-white">
+              <span className="text-lg md:text-xl font-semibold text-white">
                 Pick your <span className="text-accent">SUPERPOWER</span>
               </span>
 
-              <span className=" text-lg hidden md:inline text-white">—</span>
+              <span className="hidden md:inline text-white/70">—</span>
 
-              <span className="text-lg md:text-xl font-medium text-primary group-hover:text-accent transition-colors text-white">
+              <span className="text-lg md:text-xl font-medium text-white group-hover:text-accent transition-colors">
                 Browse all courses
               </span>
 
               {/* Arrow */}
               <span
                 className="
-            ml-2
-            inline-flex
-            items-center
-            justify-center
-            w-8
-            h-8
-            rounded-full
-            bg-accent/90
-            text-white
-            transform
-            transition-all
-            duration-300
-            group-hover:translate-x-1
-          "
+          ml-2
+          inline-flex
+          items-center
+          justify-center
+          w-8
+          h-8
+          rounded-full
+          bg-[#ff5f45]
+          text-white
+          transition-transform
+          duration-300
+          group-hover:translate-x-1
+        "
               >
                 →
               </span>
-
-              {/* Glow */}
-              <div className="absolute -inset-1 bg-accent/20 blur-2xl opacity-0 transition-opacity" />
             </div>
           </div>
         </Link>
