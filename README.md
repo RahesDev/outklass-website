@@ -1,4 +1,4 @@
-# Welcome to your Otklass project
+# Welcome to your Outklass project
 
 ## Project info
 
